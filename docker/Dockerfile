@@ -2,13 +2,12 @@ FROM registry.cn-shenzhen.aliyuncs.com/pihou-api/api-base:1.0
 
 MAINTAINER monkey <bufan108@gmail.com>
 
-RUN echo $(pwd)
 RUN mkdir -p /app /data/log
 
-RUN echo $(pwd)
 ADD . /app
-ADD ./docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
-ADD ./docker/longban.conf /etc/nginx/conf.d/default.conf
+RUN ls /app
+RUN cp /app/docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf && \
+cp /app/docker/longban.conf /etc/nginx/conf.d/default.conf
 
 RUN pip install --index-url https://mirrors.aliyun.com/pypi/simple/ -r /app/docker/requirements.txt
 
