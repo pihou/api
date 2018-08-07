@@ -4,7 +4,7 @@ MAINTAINER monkey <bufan108@gmail.com>
 
 RUN mkdir -p /app /data/log
 
-ADD . /app
+ADD .. /app
 RUN ls /app
 RUN cp /app/docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf && \
 cp /app/docker/longban.conf /etc/nginx/conf.d/default.conf
