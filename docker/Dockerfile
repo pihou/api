@@ -1,4 +1,4 @@
-FROM registry-vpc.cn-shenzhen.aliyuncs.com/pihou-api/api-base:1.0
+FROM registry.cn-shenzhen.aliyuncs.com/pihou-api/api-base:1.0
 
 MAINTAINER monkey <bufan108@gmail.com>
 
