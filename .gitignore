@@ -1,0 +1,26 @@
+__pycache__/
+*.egg-info/
+build/
+sdist/
+dist/
+*.py[cod]
+*.so
+*.egg
+extensions.json
+
+# Translations
+*.mo
+*.pot
+
+build/
+*.log
+
+.idea/
+
+collected/
+log
+
+*.swp
+_vimproject
+tags
+

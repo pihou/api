@@ -1,0 +1,18 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    registry: harbor.longban.site
+    username: admin 
+    password: Xin1101
+    repo: harbor.longban.site/longban/api
+    dockerfile: docker/Dockerfile
+    tag: "${DRONE_COMMIT:0:8}"
+  deploy:
+    image: harbor.longban.site/k8s/deploy:1.0
+    environment:
+    - NAMESPACE=test
+    - DEPLOYMENT=api
+    - CONTAINER=api
+    - REPO=harbor.longban.site/longban/api
+    - TAG=${DRONE_COMMIT:0:8}
+    - KUBERNETES_SERVER=https://192.168.0.118:6443
