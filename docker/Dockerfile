@@ -5,8 +5,8 @@ MAINTAINER monkey <bufan108@gmail.com>
 RUN mkdir -p /app /data/log
 
 ADD . /app
-ADD docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
-ADD docker/longban.conf /etc/nginx/conf.d/default.conf
+ADD ./docker/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+ADD ./docker/longban.conf /etc/nginx/conf.d/default.conf
 
 RUN pip install --index-url https://mirrors.aliyun.com/pypi/simple/ -r /app/docker/requirements.txt
 
