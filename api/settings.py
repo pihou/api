@@ -43,8 +43,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle'
     ),
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10000000/minute',
-        'user': '10000000/minute'
+        'anon': '1000000/second',
+        'user': '1000000/second'
     },
     'EXCEPTION_HANDLER': 'api.rest_custom.custom_exception_handler',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
