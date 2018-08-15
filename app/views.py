@@ -25,5 +25,7 @@ class BenchMarkView(APIView):
             "ret_code": 0,
             "ret_msg": "",
         }
-        return Response(info)
+        ret = Response(info)
+        ret["Content-Length"] = 27
+        return ret
 
