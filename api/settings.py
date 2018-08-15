@@ -38,14 +38,14 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     ),
-#    'DEFAULT_THROTTLE_CLASSES': (
-#        'rest_framework.throttling.AnonRateThrottle',
-#        'rest_framework.throttling.UserRateThrottle'
-#    ),
-#    'DEFAULT_THROTTLE_RATES': {
-#        'anon': '120/minute',
-#        'user': '120/minute'
-#    },
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '10000000/minute',
+        'user': '10000000/minute'
+    },
     'EXCEPTION_HANDLER': 'api.rest_custom.custom_exception_handler',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 12 
